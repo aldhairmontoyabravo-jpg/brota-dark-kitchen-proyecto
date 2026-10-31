@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🥗%3C/text%3E%3C/svg%3E">
+<title>Brota Dark Kitchen · Comida saludable en Miraflores</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="logo">Brota<span>.</span></div>
+  <nav><a href="#nosotros">Nosotros</a><a href="#menu">Menú</a><button class="cartbtn" id="theme" type="button" aria-label="Cambiar tema claro u oscuro" style="background:transparent;color:var(--ink);border:1px solid var(--line)">🌓</button><button class="cartbtn" id="openReg" type="button" style="background:var(--yellow);color:#2a3a2c">Regístrate</button><button class="cartbtn" id="openCart" type="button">🛒 Carrito (<span id="cnt">0</span>)</button></nav>
+</header>
+
+<div class="hero"><div>
+  <div style="font-family:system-ui,sans-serif;font-weight:700;letter-spacing:.04em;font-size:.95rem;margin-bottom:10px">Comer rico también es cuidarte</div>
+  <h1>Tu semana más rica, más saludable.</h1>
+  <p>Platos frescos, ingredientes de calidad y sabores que te hacen bien. Tú eliges, nosotros cocinamos y te lo ponemos fácil.</p>
+  <a class="btn" href="#menu">Ver el menú de la semana</a></div><div class="collage" id="collage"></div>
+</div>
+
+<main class="wrap">
+<section id="nosotros">
+  <h2>Quiénes somos</h2>
+  <p class="sub" style="margin-bottom:12px">En Brota, creemos que llevar una alimentación saludable debe ser sencillo, incluso cuando tienes una rutina ocupada. Por eso, ofrecemos almuerzos nutritivos, deliciosos y prácticos, pensados para jóvenes que estudian y/o trabajan y buscan cuidar su bienestar sin descuidar sus responsabilidades.</p>
+  <p class="sub">Nos adaptamos a tu ritmo de vida, preparando y entregando tus almuerzos en el menor tiempo de espera posible, para que disfrutes de una comida saludable sin interrumpir demasiado tu día. Queremos ayudarte a aprovechar mejor tu tiempo, mientras disfrutas de una alimentación equilibrada y llena de sabor.</p>
+  <div class="about">
+    <div class="pill"><b>🌱 Ingredientes de calidad</b>Insumos frescos y seleccionados cada semana.</div>
+    <div class="pill"><b>👩‍🍳 Somos dark kitchen</b>Preparamos cada plato nosotros mismos, sin local de atención: toda la energía va a tu comida.</div>
+    <div class="pill"><b>📍 Solo Miraflores</b>Operamos únicamente en Miraflores para llegar rápido y fresco.</div>
+  </div>
+</section>
+
+<section id="encuentranos">
+  <h2>Encuéntranos</h2>
+  <div class="about">
+    <div class="pill"><b>🌐 Nuestra web</b>Pide directo aquí: es nuestro canal más directo.</div>
+    <div class="pill"><b>📸 Instagram</b>Compartimos nuestros platos y novedades.</div>
+    <div class="pill"><b>🛵 Pedidos Ya y Rappi</b>También estamos en estas apps de delivery.</div>
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Menú semanal</h2>
+  <p class="sub">De lunes a viernes: 3 platos, 2 postres y 2 bebidas saludables por día.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div id="menuBody"></div>
+</section>
+
+<section id="registro" class="modal" hidden><div class="sheet"><button class="x" id="close" type="button" aria-label="Cerrar">✕</button>
+  <h2>Regístrate</h2>
+  <p class="sub">Cuéntanos si tienes alguna alergia para cuidar tus pedidos.</p>
+  <form id="reg">
+    <div class="row">
+      <label>Nombre completo<input type="text" id="nombre" required></label>
+      <label>Correo electrónico<input type="email" id="correo" required></label>
+    </div>
+    <label>¿Tienes alguna alergia o restricción alimentaria?<textarea id="alergia" rows="3" placeholder="Ej.: frutos secos, gluten, lácteos… o escribe “Ninguna”"></textarea></label>
+    <label class="chk"><input type="checkbox" id="acepto" required> <span>He leído y acepto la política de privacidad de datos que aparece abajo.</span></label>
+    <button class="btn" type="submit">Registrarme</button>
+    <div id="msg" role="status"></div>
+  </form>
+
+  <div class="policy" id="privacidad">
+    <h2>Política de privacidad de datos</h2>
+    <p><b>Datos que recopilamos:</b></p>
+    <ul><li>Nombre y correo electrónico.</li><li>Dirección de entrega en Miraflores.</li><li>Alergias o restricciones alimentarias que nos indiques.</li><li>Historial de pedidos realizados en esta web.</li></ul>
+    <p><b>Para qué los usamos:</b></p>
+    <ul><li>Gestionar y entregar tus pedidos.</li><li>Evitar ingredientes que te afecten según tus alergias.</li><li>Contactarte sobre el estado de tu pedido y, solo si lo autorizas, enviarte novedades del menú.</li><li>Escribirte después de la entrega para conocer tu experiencia con el plato y recibir tu opinión.</li></ul>
+    <p><b>Tus derechos:</b> no vendemos ni compartimos tus datos con terceros ajenos al servicio. Puedes acceder, rectificar, cancelar u oponerte al uso de tus datos en cualquier momento escribiendo a hola@brota.pe, conforme a la Ley N.º 29733 de Protección de Datos Personales del Perú.</p>
+  </div>
+</div></section>
+</main>
+
+<footer>Brota Dark Kitchen · Solo Miraflores, Lima · © 2026</footer>
+<button id="chatBtn" type="button">💬 Chatea con nosotros</button>
+<div id="chat" hidden role="dialog" aria-label="Chat de postventa">
+  <div class="ch"><span>Equipo de ventas Brota</span><button id="chatX" type="button" aria-label="Cerrar chat">✕</button></div>
+  <div id="cmsgs"></div><div id="chips"></div>
+  <form id="cform"><input id="cname" type="text" placeholder="Tu nombre" autocomplete="name" style="flex-basis:100%"><input id="cin" type="text" placeholder="Escribe tu mensaje…" autocomplete="off"><button class="btn" type="submit">Enviar</button></form>
+</div>
+<section id="carrito" class="modal" hidden><div class="sheet"><button class="x" id="closeCart" type="button" aria-label="Cerrar">✕</button>
+  <h2>Tu pedido</h2>
+  <div id="cartList"></div>
+  <p id="free"></p><div class="bar"><i id="barf"></i></div>
+  <form id="ord">
+    <p id="needreg" class="sub" style="margin:0">Para comprar necesitas estar registrado. <a href="#" id="goReg" style="color:var(--green-d);font-weight:700">Regístrate aquí</a>.</p>
+    <label>Dirección de entrega en Miraflores<input type="text" id="dir" required placeholder="Calle, número, departamento"></label>
+    <label>Hora en la que deseas recibir tu pedido<input type="time" id="hora" required></label>
+    <button class="btn" type="submit">Comprar</button>
+    <div id="omsg" role="status"></div>
+  </form>
+</div></section>
+<div id="lb" hidden><div><img id="lbi" alt=""><p id="lbp"></p></div></div>
+<div id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
